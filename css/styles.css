@@ -60,6 +60,7 @@ ul {
 
 .header-flex {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -95,7 +96,7 @@ ul {
 
 .adress {
   display: flex;
-  align-items: flex-end;
+  align-items: baseline;
   margin-left: 305px;
 }
 
@@ -126,17 +127,44 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.icons-conection {
+  fill: #757575;
+}
+.icons-conection:hover,
+.icons-conection:focus {
+  fill: var(--accent-color);
+}
+
 /*Контент*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .section-title.centered {
   text-align: center;
 }
 
 .hero {
-  background: #2f303a;
-  height: 600px;
+  margin: auto;
+  padding: auto;
   text-align: center;
-
   margin-bottom: 94px;
+  max-width: 1600px;
+  height: 600px;
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url("../images/headeropt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .section-hero {
@@ -171,14 +199,6 @@ ul {
   min-height: 50px;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 h2 {
   color: var(--primary-text-color);
 
@@ -187,6 +207,17 @@ h2 {
   line-height: 1.17;
   text-align: center;
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-flex {
@@ -203,6 +234,80 @@ h2 {
   margin-bottom: 10px;
 }
 
+.feature-pics {
+}
+
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--section-team-bg);
+  border-radius: 4px;
+}
+
+.clients-list-style {
+  fill: #afb1b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+
+.clients-list-style:hover,
+.clients-list-style:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.item-link-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  width: 44px;
+  height: 44px;
+}
+.item-link-style:hover,
+.item-link-style:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: var(--text-white-color);
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+}
+.item-link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--text-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.item-link-footer:hover,
+.item-link-footer:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: var(--text-white-color);
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+}
+
+.block-footer {
+  display: block;
+}
 .section-title {
   margin-bottom: 50px;
 }
@@ -237,12 +342,44 @@ h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-transform: none;
+  margin-top: 33px;
 }
 
 .team-position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
+}
+
+.team-card {
+  background-color: var(--text-white-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.team-card:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.social-links {
+  width: 20px;
+  height: 20px;
+}
+
+.list-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 24px;
+}
+
+.list-links-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
 }
 
 .box-clients {
